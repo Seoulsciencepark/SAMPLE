@@ -21,7 +21,7 @@ return (number%modulo+modulo)%modulo;
 
 } 
 //웹사이트 링크 수정해야함
-const websiteLink="http://127.0.0.1:5500/index.html";
+const websiteLink="https://www.scsei.info/SAMPLE/index.html";
 const textFileDirectory="/textfiles"
 const audioFileDirectory="/mp3files"
 const mainImageDirectory="/images"
