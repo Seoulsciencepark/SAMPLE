@@ -21,7 +21,7 @@ return (number%modulo+modulo)%modulo;
 
 } 
 //웹사이트 링크 수정해야함
-const websiteLink="https://www.scsei.info/SAMPLE/index.html";
+const websiteLink="http://127.0.0.1:5500/index.html";
 const textFileDirectory="/textfiles"
 const audioFileDirectory="/mp3files"
 const mainImageDirectory="/images"
@@ -57,10 +57,6 @@ itemText.src=textFileDirectory+"/"+itemNo+lang+".txt";
 var index=itemList.indexOf(itemNo);
 
 
-//
-const title = document.getElementById("title");
-
-title.innerText = nameList[index];
 
 
 
@@ -97,39 +93,6 @@ mainText[0].innerHTML = txtText;
 
 };
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function dropDown() {
-  document.getElementById("drops").classList.toggle("show");
-}
-
-// JavaScript to handle page switching
-
-document.getElementById("play-btn").addEventListener("click", function() {
-  document.getElementById("page1").style.display = "none";
-  document.getElementById("page2").style.display = "block";
-});
-const buttons = document.querySelectorAll('.buttons');
-
-function toggleVisibility() {
-  document.getElementById("page1").style.display = "none";
-  document.getElementById("page2").style.display = "block";
-};
-
-document.addEventListener('click', function(event) {
-  // Check if the clicked element is one of the preassigned buttons
-  let clickedInsideButton = false;
-  buttons.forEach(function(button) {
-      if (button.contains(event.target)) {
-          clickedInsideButton = true;
-      }
-  });
-
-  // If the clicked element is not a preassigned button, toggle the div
-  if (!clickedInsideButton) {
-      toggleVisibility();
-  }
-});
 
 let otherLang;
 if (lang === "eng") {
@@ -140,8 +103,6 @@ if (lang === "eng") {
 
 const langLink1 = document.getElementById("lang-link1");
 langLink1.href=websiteLink+"?item="+itemList[index]+'&lang='+otherLang;
-const langLink2 = document.getElementById("lang-link2");
-langLink2.href=websiteLink+"?item="+itemList[index]+'&lang='+otherLang;
 
 //오디오로드
 const audioPlayer = document.getElementById("audio")
@@ -152,8 +113,7 @@ audioPlayer.src= audioFileDirectory+"/"+itemNo+lang+".mp3"
 const firstImage = document.getElementById("first-image")
 firstImage.src= mainImageDirectory+"/"+itemNo+lang+"first"+".png"
 
-const secondImage = document.getElementById("second-image")
-secondImage.src= mainImageDirectory+"/"+itemNo+"second"+".png"
+
 
 // 다음 페이지와 이전 페이지
 
@@ -162,3 +122,25 @@ nextLink.href=websiteLink+"?item="+itemList[mod(index+1,itemLength)]+'&lang='+la
 
 const previousLink = document.getElementById("prev_nav");
 previousLink.href=websiteLink+"?item="+itemList[mod(index-1,itemLength)]+'&lang='+lang;
+
+//스크롤
+console.log("done")
+
+
+// script.js
+
+
+document.addEventListener('scroll', () => {
+  const overlay = document.querySelector('.overlay');
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  // Calculate the new position of the overlay based on the scroll position
+  let newHeight = 50+(scrollPosition / windowHeight) * 100;
+  overlay.style.height = `${newHeight}vh`
+
+});
+
+
+
+

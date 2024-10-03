@@ -3,50 +3,42 @@
     font-family: custom;
     src: url(GowunDodum-Regular.ttf);
 }
-
-html, body {
-
+/* styles.css */
+* {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure html and body take the full height */
-   /* background-color: #d9d9d9;*/
-    background-image: url("/images/test3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
-.page {
-    width: 100%;
+body, html {
     height: 100%;
-    text-align: center;
-    display: none; /* Hide all pages by default */
+    overflow-x: hidden;
+    background-color:rgba(30,30, 30, 0.8);
+
+    
 }
 
-#page1 {
-    display: block;
-}
-
-
-#first-image {
-
-/*
+.overlay {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures the image doesn't overflow the container */
-    display: block;
-    width: 100vw;   /* Fill the entire viewport width */
-    height: 100vh;  /* Fill the entire viewport height */
-    object-fit: cover;  /* Cover the area while keeping aspect ratio, cropping as little as possible */ 
+    height: 50vh;
+    background: rgba(30, 30, 30, 0.8); /* Half transparent */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    transition: height 0.5s ease; /* Sliding transition */
+    overflow: hidden;
+
 }
 
-#second-image {
+#first-image{
     width: 100%;
-    display:block;
-
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .audio-player-container {
@@ -68,8 +60,9 @@ html, body {
 audio {
     width: 100%; /* Make the audio player stretch across the screen */
     max-width: 600px; /* Optional: You can control the maximum width */
-    margin: 0 auto; /* Center it horizontally */
+    margin: 0 auto 20px auto; /* Center it horizontally */
     display: block;
+    height:45px;
 }
 
 .nav-container{
@@ -81,8 +74,8 @@ audio {
     bottom: 0; /* Moves the div to the bottom of the parent 
     width: 100%;
     */
-    position: fixed;
-    background-color: white;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.8);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     height: 50px;
@@ -94,7 +87,7 @@ audio {
 
 #prev_nav_img{
     float: left;
-    margin-left: 15px;
+    margin-left: 25px;
     width: 30px; /* Adjust the size of the icon */
     height: 34px;
     margin-top: 10px;
@@ -102,7 +95,7 @@ audio {
 
 #next_nav_img{
     float:right;
-    margin-right: 15px;
+    margin-right: 25px;
     width: 30px; /* Adjust the size of the icon */
     height: 34px;
     margin-top: 10px;
@@ -129,31 +122,15 @@ iframe {
     position: absolute;
     top: 10px; /* Adjust the vertical distance from the top */
     right: 10px; /* Adjust the horizontal distance from the right */
-    width: 50px; /* Adjust the size of the icon */
-    height: 50px;
+    width: 40px; /* Adjust the size of the icon */
+    height: 40px;
     cursor: pointer;
 }
 
-#play-btn{
-    position: absolute;
-    bottom: 10px; /* Adjust the vertical distance from the top */
-    left: 10px; /* Adjust the horizontal distance from the right */
-    width: 100px; /* Adjust the size of the icon */
-    height:100px;
-    cursor: pointer;
-}
-
-.image-container{
+.container{
     position: relative;
-    /*display: inline-block;*/
-    height:100%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures the image doesn't overflow the container */
-
+    flex-grow: 1;
+    overflow: scroll; 
 }
 
 .mainText{
@@ -164,6 +141,8 @@ iframe {
     margin-left: 20px;
     margin-right: 20px;
 
+
+
 }
 
 pre {
@@ -171,17 +150,4 @@ pre {
     font-size: 20px;
  }
 
-
-/*
-.mainText{
-    background-color:rgba(28,34,61,255);
-}
-*/
-
-
-  .show {
-    display:block;
-    margin-top: 20px;
-    font-size: large;
-}
 
