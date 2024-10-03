@@ -20,7 +20,6 @@ body, html {
     width: 100%;
     height: 80vh; /* Limit the visible height */
     overflow-y: scroll; /* Make the container scrollable */
-    border: 2px solid #000;
   }
 
 
