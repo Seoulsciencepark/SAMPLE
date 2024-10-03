@@ -153,7 +153,7 @@ scrollDiv.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
 
   // Calculate the new position of the overlay based on the scroll position
-  let newHeight = window.innerHeight/2+scrollPosition
+  let newHeight = window.innerHeight/2+scrollPosition/2
   overlay.style.height = `${newHeight}px`
 
 });
