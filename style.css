@@ -100,17 +100,17 @@ audio {
 
 #prev_nav_img{
     float: left;
-    margin-left: 25px;
-    width: 30px; /* Adjust the size of the icon */
-    height: 38px;
+    margin-left: 20px;
+    width: 24px; /* Adjust the size of the icon */
+    height: 34px;
     margin-top: 10px;
 }
 
 #next_nav_img{
     float:right;
-    margin-right: 25px;
-    width: 30px; /* Adjust the size of the icon */
-    height: 38px;
+    margin-right: 20px;
+    width: 24px; /* Adjust the size of the icon */
+    height: 34px;
     margin-top: 10px;
 }
 
