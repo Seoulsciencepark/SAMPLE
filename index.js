@@ -2,6 +2,8 @@
 const fullOrder= ['0-0-1@도르래','0-0-2@아르키메데스 운동 장치','0-0-3@정글짐 이용 안내']
 //여기 아래로 절대 수정 금지!
 
+const ROOT = "/SAMPLE"
+
 var itemLength=fullOrder.length;
 var itemList=[];
 var nameList=[];
@@ -22,9 +24,9 @@ return (number%modulo+modulo)%modulo;
 } 
 //웹사이트 링크 수정해야함
 const websiteLink="https://www.scsei.info/SAMPLE/index.html";
-const textFileDirectory="/textfiles"
-const audioFileDirectory="/mp3files"
-const mainImageDirectory="/images"
+const textFileDirectory=ROOT+"/textfiles"
+const audioFileDirectory=ROOT+"/mp3files"
+const mainImageDirectory=ROOT+"/images"
 
 // 브라우저의 URL 중 쿼리 파싱
 //window.location.search는 url에서 ?부터끝까지의값(즉 쿼리 파싱))
