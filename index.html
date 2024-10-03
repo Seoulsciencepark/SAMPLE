@@ -4,42 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>융합과학교육원남산분원</title>
+    <title>융합과학교육원본원</title>
   </head>
   <body>
-    <div class="content">
-      <img id="first-image" src="/images/0-0-2korfirst.png" />
-      <img src="/images/0-0-2korfirst.png" />
-      <a id="lang-link1" href="textfiles/defaultText.txt">
-        <img
-          src="images/lang.png"
-          alt="Small Icon"
-          id="lang-icon"
-          class="buttons"
-          href="textfiles/defaultText.txt"
-        />
-      </a>
-      <div class="overlay">
-        <div class="content">
-          <audio id="audio" controls>
-            <source src="/mp3files/0-0-1kor.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
+    <div>
+      <div class="content" id="scrollable-div">
+        <img id="first-image" src="/images/0-0-2korfirst.png" />
+        <a id="lang-link1" href="textfiles/defaultText.txt">
+          <img
+            src="images/lang.png"
+            alt="Small Icon"
+            id="lang-icon"
+            class="buttons"
+            href="textfiles/defaultText.txt"
+          />
+        </a>
+        <div id = "blankdiv" style="height: 350px;"></div>
+      </div>
 
-          <div class="container">
-            <p class="mainText"></p>
-          </div>
-          <div class="nav-container">
-            <a id="prev_nav" href="textfiles/defaultText.txt">
-              <img id="prev_nav_img" src="images/previous.png" />
-            </a>
-            <a id="next_nav" href="textfiles/defaultText.txt">
-              <img id="next_nav_img" src="images/next.png" />
-            </a>
-          </div>
+      <div class="overlay" style="height: 50vh">
+        <audio id="audio" controls>
+          <source src="/mp3files/0-0-1kor.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <div class="container">
+          <p class="mainText"></p>
+        </div>
+        <div class="nav-container">
+          <a id="prev_nav" href="textfiles/defaultText.txt">
+            <img id="prev_nav_img" src="images/previous.png" />
+          </a>
+          <a id="next_nav" href="textfiles/defaultText.txt">
+            <img id="next_nav_img" src="images/next.png" />
+          </a>
         </div>
       </div>
-      <!--
+    </div>
+    <!--
 
     <div class="page" id="page1">
       <h1 id="title">융합과학교육원남산분원</h1>
@@ -85,8 +87,7 @@
             <img id="next_nav_img" src="images/next.png" />
           </a>
         </div>
-      </div>
-    --></div>
+      </div> -->
 
     <iframe
       id="itemText"

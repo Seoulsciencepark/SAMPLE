@@ -124,11 +124,9 @@ const previousLink = document.getElementById("prev_nav");
 previousLink.href=websiteLink+"?item="+itemList[mod(index-1,itemLength)]+'&lang='+lang;
 
 //스크롤
-console.log("done")
 
 
 // script.js
-
 
 document.addEventListener('scroll', () => {
   const overlay = document.querySelector('.overlay');
@@ -141,6 +139,21 @@ document.addEventListener('scroll', () => {
 
 });
 
+const scrollDiv = document.getElementById('scrollable-div');
+const scrollValue = document.getElementById('scroll-value');
 
+// Add an event listener to track the scroll event
+scrollDiv.addEventListener('scroll', () => {
+  // Get the scrollTop value to see how far down the scroll bar is
+  const scrollPosition = scrollDiv.scrollTop;
+
+  const overlay = document.querySelector('.overlay');
+  const windowHeight = window.innerHeight;
+
+  // Calculate the new position of the overlay based on the scroll position
+  let newHeight = window.innerHeight/2+scrollPosition
+  overlay.style.height = `${newHeight}px`
+
+});
 
 

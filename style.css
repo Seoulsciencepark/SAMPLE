@@ -14,9 +14,15 @@ body, html {
     height: 100%;
     overflow-x: hidden;
     background-color:rgba(30,30, 30, 0.8);
-
-    
 }
+
+#scrollable-div {
+    width: 100%;
+    height: 80vh; /* Limit the visible height */
+    overflow-y: scroll; /* Make the container scrollable */
+    border: 2px solid #000;
+  }
+
 
 .overlay {
     position: fixed;
@@ -34,11 +40,18 @@ body, html {
 
 }
 
+#scroll-value{
+    color:white;
+}
+
 #first-image{
     width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
+}
+#blankdiv{
+    background: rgba(30, 30, 30, 0.8); /* Half transparent */
 }
 
 .audio-player-container {
@@ -55,6 +68,7 @@ body, html {
     padding: 10px;
     background-color: #f1f1f1;
     border-top: 1px solid #ccc;
+    height:45px;
 }
 
 audio {
@@ -62,7 +76,7 @@ audio {
     max-width: 600px; /* Optional: You can control the maximum width */
     margin: 0 auto 20px auto; /* Center it horizontally */
     display: block;
-    height:45px;
+    height:100px;
 }
 
 .nav-container{
@@ -89,7 +103,7 @@ audio {
     float: left;
     margin-left: 25px;
     width: 30px; /* Adjust the size of the icon */
-    height: 34px;
+    height: 38px;
     margin-top: 10px;
 }
 
@@ -97,7 +111,7 @@ audio {
     float:right;
     margin-right: 25px;
     width: 30px; /* Adjust the size of the icon */
-    height: 34px;
+    height: 38px;
     margin-top: 10px;
 }
 
@@ -149,5 +163,5 @@ pre {
     font-family: custom;
     font-size: 20px;
  }
-
+ 
 
