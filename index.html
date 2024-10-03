@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>융합과학교육원남산분원</title>
+  </head>
+  <body>
+    <!-- First Page -->
+    <div class="page" id="page1">
+      <h1 id="title">융합과학교육원남산분원</h1>
+      <div class="image-container">
+        <img src="images/0-0-3first.png" alt="ERROR" id="first-image" />
+        <a id="lang-link1" href="textfiles/defaultText.txt">
+          <img
+            src="images/lang.png"
+            alt="Small Icon"
+            id="lang-icon"
+            class="buttons"
+            href="textfiles/defaultText.txt"
+          />
+        </a>
+        <img src="images/play_button.png" alt="Small Icon" id="play-btn" />
+      </div>
+    </div>
+
+    <!-- Second Page -->
+    <div class="page" id="page2">
+      <img src="images/0-0-3second.png" alt="Close-up" id="second-image" />
+      <a id="lang-link2" href="textfiles/defaultText.txt">
+        <img
+          src="images/lang.png"
+          alt="Small Icon"
+          id="lang-icon"
+          class="buttons"
+          href="textfiles/defaultText.txt"
+        />
+      </a>
+      <div>
+        <div class="audio-player-container">
+          <audio id="audio" controls>
+            <source src="mp3files/0-0-3kor.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="nav-container">
+          <a id="prev_nav" href="textfiles/defaultText.txt">
+            <img id="prev_nav_img" src="images/previous.png" />
+          </a>
+          <a id="next_nav" href="textfiles/defaultText.txt">
+            <img id="next_nav_img" src="images/next.png" />
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <p class="mainText"></p>
+      </div>
+    </div>
+
+    <iframe
+      id="itemText"
+      src="textfiles/defaultText.txt"
+      width="0%"
+      height="0"
+    ></iframe>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>

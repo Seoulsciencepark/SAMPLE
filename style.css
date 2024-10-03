@@ -1,0 +1,187 @@
+/* iframe 디자인은 index.js에 되어있음 */
+@font-face {
+    font-family: custom;
+    src: url(GowunDodum-Regular.ttf);
+}
+
+html, body {
+
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure html and body take the full height */
+   /* background-color: #d9d9d9;*/
+    background-image: url("/images/test3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none; /* Hide all pages by default */
+}
+
+#page1 {
+    display: block;
+}
+
+
+#first-image {
+
+/*
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+    display: block;
+    width: 100vw;   /* Fill the entire viewport width */
+    height: 100vh;  /* Fill the entire viewport height */
+    object-fit: cover;  /* Cover the area while keeping aspect ratio, cropping as little as possible */ 
+}
+
+#second-image {
+    width: 100%;
+    display:block;
+
+}
+
+.audio-player-container {
+    /*
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+
+    margin-top: auto; /* Pushes the audio player down to the bottom */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+}
+
+audio {
+    width: 100%; /* Make the audio player stretch across the screen */
+    max-width: 600px; /* Optional: You can control the maximum width */
+    margin: 0 auto; /* Center it horizontally */
+    display: block;
+}
+
+.nav-container{
+    /*
+    background-color: gray;
+    border-radius: 15px;
+    height: 50px;
+    position: absolute;
+    bottom: 0; /* Moves the div to the bottom of the parent 
+    width: 100%;
+    */
+    position: fixed;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make it span the full width of the viewport */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+#prev_nav_img{
+    float: left;
+    margin-left: 15px;
+    width: 30px; /* Adjust the size of the icon */
+    height: 34px;
+    margin-top: 10px;
+}
+
+#next_nav_img{
+    float:right;
+    margin-right: 15px;
+    width: 30px; /* Adjust the size of the icon */
+    height: 34px;
+    margin-top: 10px;
+}
+
+
+
+iframe { 
+    display:none;
+    margin: auto;
+    padding: none;
+    border: none; 
+}
+
+#title{
+    font-family: custom;
+    color:black;
+    text-align: center;
+    margin-bottom: 0;
+    display:none;
+}
+
+#lang-icon{
+    position: absolute;
+    top: 10px; /* Adjust the vertical distance from the top */
+    right: 10px; /* Adjust the horizontal distance from the right */
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
+    cursor: pointer;
+}
+
+#play-btn{
+    position: absolute;
+    bottom: 10px; /* Adjust the vertical distance from the top */
+    left: 10px; /* Adjust the horizontal distance from the right */
+    width: 100px; /* Adjust the size of the icon */
+    height:100px;
+    cursor: pointer;
+}
+
+.image-container{
+    position: relative;
+    /*display: inline-block;*/
+    height:100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+
+}
+
+.mainText{
+    font-family: custom;
+    color:white;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+pre {
+    font-family: custom;
+    font-size: 20px;
+ }
+
+
+/*
+.mainText{
+    background-color:rgba(28,34,61,255);
+}
+*/
+
+
+  .show {
+    display:block;
+    margin-top: 20px;
+    font-size: large;
+}
+
